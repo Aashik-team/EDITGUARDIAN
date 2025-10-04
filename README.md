@@ -33,36 +33,15 @@ sudo apt update && sudo apt upgrade -y
 sudo apt install -y python3 python3-pip python3-venv git
 
 # Clone repo
-cd /opt
-git clone https://github.com/Aashik-team/EDITGUARDIAN.git Aashik-Edit
+git clone https://github.com/Aashik-team/EDITGUARDIAN
 cd Aashik-Edit
 
 # Create virtual environment
 python3 -m venv venv
-source venv/bin/activate
 
 # Install requirements
 pip install --upgrade pip
 pip install -r requirements.txt
-
-# Create .env file (open editor and paste your values)
-nano .env
-# (Paste this inside .env and fill your details)
-# ---------------------------------------------
-# API_ID=your_api_id_here
-# API_HASH=your_api_hash_here
-# TELEGRAM_TOKEN=your_bot_token_here
-#
-# OWNER_ID=123456789
-# SUDO_ID=123456789 987654321
-#
-# MONGO_URI=mongodb+srv://username:password@cluster0.mongodb.net/?retryWrites=true&w=majority
-# DB_NAME=editguardian
-#
-# LOGGER=True
-# BOT_NAME="Edit Guardian"
-# SUPPORT_ID=-1001234567890
-# ---------------------------------------------
 
 # Test run (check bot is working)
 python3 main.py
